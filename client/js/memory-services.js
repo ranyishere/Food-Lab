@@ -26,7 +26,7 @@
 		var restaurant = null,
 		l = restaurants.length,
 			i;
-		
+
 		console.log("right before for loop")
 		console.log("current_id")
 		console.log(id)
@@ -57,4 +57,3 @@
 		}]);
 	/// Might need to Menu function here
 }());
-

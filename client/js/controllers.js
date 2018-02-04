@@ -18,12 +18,17 @@ angular.module('foodlab.controllers', [])
 	.controller('RestaurantListCtrl', ['$scope', 'Restaurant', function ($scope, Restaurant) {
 		$scope.restaurants = Restaurant.query();
 	}])
-	
+
 	/// TODO(fernando): finish creating login controller
 ///	.controller('LoginCtrl', ['$cookieStore', '$scope', '$http', function ($cookieStore, $scope, $http) {
 		/// if ($cookieStore.get(
 
 	.controller('RestaurantDetailCtrl', ['$scope', 'Restaurant', '$routeParams', function ($scope, Restaurant, $routeParams, Menu) {
 		$scope.restaurant = Restaurant.get({restaurantId: $routeParams.restaurantId});
-	}]);
+	}])
 
+	.controller('ContentManagerCtrl',  ['$scope', function($scope) {
+		$scope.foodDirective = {};
+		$scope.foodNumberListing = 0;
+}]);
+	//This semi colon here is to be at the end the controllers
